@@ -19,4 +19,4 @@ The generated audio asset is dedicated to the public domain under CC0-1.0. See [
 
 ## Marketplace preview
 
-`preview.png` is a capture of this plugin's own interface and contains no third-party artwork. It is dedicated to the public domain under CC0-1.0.
+`preview.png` is a live capture of the plugin running in the Omarchy shell. It excludes the desktop wallpaper. The plugin-authored visual content is dedicated to the public domain under CC0-1.0. Contextual Omarchy shell chrome and iconography remain subject to their upstream terms.

@@ -4,9 +4,11 @@ A one-click, fully offline 40 Hz binaural player for the Omarchy Quattro bar. It
 
 The bundled sound is original and mathematically generated—no recordings or samples are used. The left channel carries a 134 Hz sine wave and the right channel carries a 174 Hz sine wave, creating a 40 Hz binaural difference. A compact five-minute Opus asset loops continuously during longer sessions.
 
+![Binaural Focus playing in the Omarchy bar](preview.png)
+
 ## Install
 
-Install and enable the plugin from its public repository:
+Install and enable the plugin from its GitHub repository:
 
 ```bash
 omarchy plugin add https://github.com/elgevan/omarchy-binaural-focus.git --enable
@@ -75,6 +77,6 @@ Playback is local and offline. The plugin starts only the bundled `mpv` player, 
 ## License
 
 - Plugin code and documentation: MIT; see [`LICENSE`](LICENSE).
-- Generated audio and marketplace preview: CC0-1.0; see [`LICENSES/CC0-1.0.txt`](LICENSES/CC0-1.0.txt).
+- Generated audio and plugin-authored preview artwork: CC0-1.0; see [`LICENSES/CC0-1.0.txt`](LICENSES/CC0-1.0.txt).
 
 See [`NOTICE.md`](NOTICE.md) for asset provenance and licensing scope.
