@@ -40,7 +40,7 @@ Item {
       "--audio-display=no",
       "--gapless-audio=yes",
       "--loop-file=inf",
-      "--really-quiet",
+      "--msg-level=all=error",
       "--volume=50",
       audioPath
     ]

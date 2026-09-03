@@ -7,7 +7,6 @@ Item {
   property color foreground: "white"
   property color accent: "#7dd3fc"
   property real phase: 0
-  property bool compact: false
 
   opacity: active ? 1 : 0.58
 
@@ -44,12 +43,12 @@ Item {
       ctx.clearRect(0, 0, w, h)
       if (w <= 0 || h <= 0) return
 
-      var layers = root.compact ? 3 : 5
-      var step = root.compact ? 1 : 2
+      var layers = 5
+      var step = 2
       for (var layer = layers - 1; layer >= 0; layer--) {
         var spread = (layer + 1) / layers
-        var amplitude = h * (root.compact ? 0.13 : 0.075 + spread * 0.19)
-        var frequency = root.compact ? 2.2 + layer * 0.55 : 2.0 + layer * 0.44
+        var amplitude = h * (0.075 + spread * 0.19)
+        var frequency = 2.0 + layer * 0.44
         var speed = 0.62 + layer * 0.11
 
         ctx.beginPath()
@@ -64,17 +63,17 @@ Item {
         }
 
         ctx.globalAlpha = root.active
-          ? (root.compact ? 0.34 + spread * 0.22 : 0.12 + spread * 0.14)
-          : (root.compact ? 0.26 : 0.09)
+          ? 0.12 + spread * 0.14
+          : 0.09
         ctx.strokeStyle = layer === 0 ? root.accent : root.foreground
-        ctx.lineWidth = root.compact ? 1.35 : 1.0 + spread * 1.2
+        ctx.lineWidth = 1.0 + spread * 1.2
         ctx.lineCap = "round"
         ctx.stroke()
       }
 
       ctx.globalAlpha = root.active ? 0.9 : 0.38
       ctx.strokeStyle = root.accent
-      ctx.lineWidth = root.compact ? 1.8 : 2.2
+      ctx.lineWidth = 2.2
       ctx.beginPath()
       for (var cx = 0; cx <= w + step; cx += step) {
         var cp = cx / w

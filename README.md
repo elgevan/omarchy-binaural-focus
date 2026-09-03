@@ -4,6 +4,8 @@ A one-click, fully offline 40 Hz binaural player for the Omarchy Quattro bar. It
 
 The bundled sound is original and mathematically generated—no recordings or samples are used. The left channel carries a 134 Hz sine wave and the right channel carries a 174 Hz sine wave, creating a 40 Hz binaural difference. A compact five-minute Opus asset loops continuously during longer sessions.
 
+Use stereo headphones, start at a low system volume, and increase it only to a comfortable level. Binaural tones are a personal focus aid, not medical treatment, and perceived effects vary.
+
 ![Binaural Focus playing in the Omarchy bar](preview.png)
 
 ## Install
@@ -57,6 +59,7 @@ Removal deletes the plugin checkout and its bundled audio. The plugin does not c
 
 - Omarchy 4 with Quattro shell plugin support
 - `mpv`, included in the standard Omarchy installation
+- Stereo headphones for the intended binaural effect
 
 `ffmpeg` is only needed by maintainers who regenerate the audio asset.
 

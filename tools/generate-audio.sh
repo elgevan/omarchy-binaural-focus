@@ -32,6 +32,8 @@ ffmpeg \
   -metadata artist="Binaural Focus" \
   -metadata license="CC0-1.0" \
   -metadata comment="Generated from independent 134 Hz left and 174 Hz right sine waves; no source recording used." \
+  -fflags +bitexact \
+  -flags:a +bitexact \
   -serial_offset 40134 \
   -y \
   "$output_path"

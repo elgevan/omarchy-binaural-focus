@@ -145,7 +145,7 @@ Panel {
               scale: 1
 
               SequentialAnimation on scale {
-                running: root.playing
+                running: root.playing && root.opened
                 loops: Animation.Infinite
                 PauseAnimation { duration: index * 240 }
                 NumberAnimation { from: 0.82; to: 1.18; duration: 1250; easing.type: Easing.OutCubic }
@@ -157,7 +157,7 @@ Panel {
           WaveField {
             anchors.fill: parent
             anchors.margins: Style.space(12)
-            active: root.playing
+            active: root.playing && root.opened
             foreground: root.foreground
             accent: root.accent
           }
