@@ -1,10 +1,6 @@
 # Binaural Focus for Omarchy
 
-A one-click, fully offline 40 Hz binaural player for the Omarchy Quattro bar. It includes a seven-bar status icon, a calm animated control panel, a session timer, and IPC controls.
-
-The bundled sound is original and mathematically generated—no recordings or samples are used. The left channel carries a 134 Hz sine wave and the right channel carries a 174 Hz sine wave, creating a 40 Hz binaural difference. A compact five-minute Opus asset loops continuously during longer sessions.
-
-Use stereo headphones, start at a low system volume, and increase it only to a comfortable level.
+Binaural beats play slightly different tones in each ear to create a steady pulse that some people use while focusing. This offline Omarchy bar plugin loops a 40 Hz binaural beat through stereo headphones, with one-click playback, a visualizer, and a session timer.
 
 ![Binaural Focus playing in the Omarchy bar](preview.png)
 
