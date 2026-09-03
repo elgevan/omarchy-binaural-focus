@@ -73,7 +73,7 @@ Set `DURATION_SECONDS` to create a different loop length. Keep it at a whole num
 
 ## Privacy and security
 
-Playback is local and offline. The plugin starts only the bundled `mpv` player, makes no network requests, and stores no user data.
+Playback is local and offline. The plugin starts `/usr/bin/mpv` through its local process wrapper, makes no network requests, and stores no user data.
 
 ## License
 

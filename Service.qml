@@ -14,12 +14,22 @@ Item {
   property string lastError: ""
   property string stderrText: ""
 
+  readonly property int errorLimit: 512
+
   readonly property string sourceDir: manifest && manifest.__sourceDir
     ? String(manifest.__sourceDir)
     : ""
   readonly property string audioPath: sourceDir !== ""
     ? sourceDir + "/assets/binaural-focus-40hz.opus"
     : ""
+  readonly property string playerLauncher: sourceDir !== ""
+    ? sourceDir + "/tools/play-audio"
+    : ""
+
+  function rememberError(line) {
+    const message = String(line || "").trim()
+    if (message !== "") stderrText = message.slice(-errorLimit)
+  }
 
   function play() {
     if (player.running) return true
@@ -33,17 +43,7 @@ Item {
     expectedStop = false
     elapsedSeconds = 0
     startedAtMs = Date.now()
-    player.command = [
-      "mpv",
-      "--no-config",
-      "--no-video",
-      "--audio-display=no",
-      "--gapless-audio=yes",
-      "--loop-file=inf",
-      "--msg-level=all=error",
-      "--volume=50",
-      audioPath
-    ]
+    player.command = [playerLauncher, audioPath]
     playing = true
     player.running = true
     return true
@@ -94,10 +94,13 @@ Item {
     id: player
     running: false
     command: []
+    clearEnvironment: true
+    environment: ({
+      "XDG_RUNTIME_DIR": null
+    })
 
-    stderr: StdioCollector {
-      waitForEnd: true
-      onStreamFinished: root.stderrText = String(text || "").trim()
+    stderr: SplitParser {
+      onRead: function(line) { root.rememberError(line) }
     }
 
     onExited: function(exitCode) {
