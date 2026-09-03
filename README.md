@@ -1,6 +1,8 @@
 # Binaural Focus for Omarchy
 
-Binaural beats play slightly different tones in each ear to create a steady pulse that some people use while focusing. This offline Omarchy bar plugin loops a 40 Hz binaural beat through stereo headphones, with one-click playback, a visualizer, and a session timer.
+Binaural beats play slightly different tones in each ear to create a steady pulse to help the user focus.
+
+This offline Omarchy bar plugin loops a 40 Hz binaural beat through stereo headphones, with one-click playback, a visualizer, and a session timer.
 
 ![Binaural Focus playing in the Omarchy bar](preview.png)
 
